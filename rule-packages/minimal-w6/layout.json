@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    { "key": "STR", "label": "KRA", "name": "Kraft" },
+    { "key": "DEX", "label": "GES", "name": "Geschick" },
+    { "key": "CON", "label": "AUS", "name": "Ausdauer" },
+    { "key": "INT", "label": "VER", "name": "Verstand" },
+    { "key": "WIS", "label": "GSP", "name": "Gespür" },
+    { "key": "CHA", "label": "AUR", "name": "Ausstrahlung" }
+  ],
+  "saves": [
+    { "key": "save.Body", "label": "Körper", "format": "signed", "short": "Kör" },
+    { "key": "save.Mind", "label": "Geist", "format": "signed", "short": "Gei" }
+  ],
+  "sheetStats": [
+    { "key": "maxHp", "label": "Trefferpunkte" },
+    { "key": "ac", "label": "Verteidigung" },
+    { "key": "initiative", "label": "Initiative", "format": "signed" },
+    { "key": "attack", "label": "Angriff", "format": "signed" },
+    { "key": "bonus", "label": "Stufenbonus", "format": "signed" },
+    { "key": "save.Body", "label": "Körper", "format": "signed" },
+    { "key": "save.Mind", "label": "Geist", "format": "signed" },
+    { "key": "speed", "label": "Bewegung", "format": "distance" },
+    { "key": "carryCapacity", "label": "Traglast", "format": "weight" }
+  ],
+  "combatStats": [
+    { "key": "attack", "label": "Angriff", "format": "signed" },
+    { "key": "save.Body", "label": "Körper", "format": "signed" },
+    { "key": "initiative", "label": "Initiative", "format": "signed" },
+    { "key": "save.Mind", "label": "Geist", "format": "signed" },
+    { "key": "speed", "label": "Bewegung", "format": "distance" },
+    { "key": "passivePerception", "label": "Passive Wahrnehmung" }
+  ],
+  "partyStats": [
+    { "key": "ac", "label": "Verteidigung", "short": "Vert" },
+    { "key": "initiative", "label": "Initiative", "format": "signed", "short": "Ini" },
+    { "key": "save.Body", "label": "Körper", "format": "signed", "short": "Kör" },
+    { "key": "save.Mind", "label": "Geist", "format": "signed", "short": "Gei" },
+    { "key": "passivePerception", "label": "Passive Wahrnehmung", "short": "Wahrn." }
+  ],
+  "armorDetail": "Verteidigung · Initiative {initiative}",
+  "quickStats": [
+    { "key": "ac", "label": "Verteidigung", "short": "Vert.", "icon": "shield" },
+    { "key": "initiative", "label": "Initiative", "short": "Init", "format": "signed", "icon": "zap" },
+    { "key": "attack", "label": "Angriff", "short": "Angr.", "format": "signed", "icon": "swords" }
+  ]
+}

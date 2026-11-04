@@ -1,0 +1,36 @@
+{
+  "name": "Barbar 5, Hügelzwerg, ungerüstet",
+  "character": {
+    "level": 5,
+    "classes": [
+      {
+        "classId": "barbarian",
+        "level": 5
+      }
+    ],
+    "abilities": {
+      "STR": 16,
+      "DEX": 14,
+      "CON": 15,
+      "INT": 8,
+      "WIS": 10,
+      "CHA": 10
+    },
+    "choices": {
+      "barbarian/skills": "athletics,survival"
+    },
+    "facts": {
+      "armor.type": "none"
+    },
+    "ancestry": "hill_dwarf"
+  },
+  "expect": {
+    "CON": 17,
+    "WIS": 11,
+    "maxHp": 60,
+    "ac": 15,
+    "speed": 35,
+    "save.CON": 6,
+    "skill.athletics": 6
+  }
+}

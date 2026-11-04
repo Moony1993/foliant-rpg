@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Heavy Blow",
+    "type": "Combat",
+    "prerequisites": "STR 13",
+    "benefit": "Once per turn when you hit with a melee weapon attack, you deal an extra 1d4 damage.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Cleaving Arc",
+    "type": "Combat",
+    "prerequisites": "Heavy Blow",
+    "benefit": "When your melee attack drops a creature to 0 hit points, you can move 5 feet as a bonus action and attack another creature.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Thundering Charge",
+    "type": "Combat",
+    "prerequisites": "Cleaving Arc, character level 8",
+    "benefit": "If you move at least 20 feet straight toward a target and then hit it, it must succeed on a STR saving throw or be knocked prone.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Executioner",
+    "type": "Combat",
+    "prerequisites": "Thundering Charge, character level 12",
+    "benefit": "Your melee attacks against prone creatures score a critical hit on a 19 or 20.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Twin Strike",
+    "type": "Combat",
+    "prerequisites": "DEX 13",
+    "benefit": "When fighting with two weapons, you add your ability modifier to the damage of the bonus attack.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Flurry of Steel",
+    "type": "Combat",
+    "prerequisites": "Twin Strike",
+    "benefit": "+1 to AC while you wield a melee weapon in each hand.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Whirlwind",
+    "type": "Combat",
+    "prerequisites": "Flurry of Steel, Cleaving Arc, character level 12",
+    "benefit": "As an action, you make one attack against every creature within reach.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Shield Bash",
+    "type": "Combat",
+    "prerequisites": "Heavy Blow, Iron Guard",
+    "benefit": "As a bonus action, you shove a creature 5 feet away with your shield.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Blade Parry",
+    "type": "Combat",
+    "prerequisites": "Twin Strike, Iron Guard",
+    "benefit": "As a reaction, you add your proficiency bonus to your AC against one melee attack.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Riposte",
+    "type": "Combat",
+    "prerequisites": "Blade Parry, character level 8",
+    "benefit": "When a melee attack misses you after a Blade Parry, you can strike back at once.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Steady Hand",
+    "type": "Combat",
+    "prerequisites": "DEX 13",
+    "benefit": "Your ranged attacks ignore half cover.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Hawk Eye",
+    "type": "General",
+    "prerequisites": "Steady Hand",
+    "benefit": "+2 to Perception.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Arrow Storm",
+    "type": "Combat",
+    "prerequisites": "Hawk Eye, character level 8",
+    "benefit": "Once per short rest, you attack every creature within 10 feet of a point within range.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Quick Draw",
+    "type": "Combat",
+    "prerequisites": "Steady Hand",
+    "benefit": "Drawing or stowing a weapon costs you nothing.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Close Quarters Archer",
+    "type": "Combat",
+    "prerequisites": "Steady Hand",
+    "benefit": "No disadvantage on ranged attacks against creatures within 5 feet.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Deadeye",
+    "type": "Combat",
+    "prerequisites": "Hawk Eye, Close Quarters Archer",
+    "benefit": "Your ranged attacks also ignore three-quarters cover.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Ricochet",
+    "type": "Combat",
+    "prerequisites": "Deadeye, character level 12",
+    "benefit": "When your ranged attack misses, you can attack a second target within 10 feet.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Throwing Master",
+    "type": "Combat",
+    "prerequisites": "Quick Draw, Heavy Blow",
+    "benefit": "Thrown weapons deal an extra 1d4 damage.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Volley",
+    "type": "Combat",
+    "prerequisites": "Arrow Storm, Quick Draw, character level 16",
+    "benefit": "As an action, you make three ranged attacks at −2.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Grappler",
+    "type": "Combat",
+    "prerequisites": "STR 13",
+    "benefit": "Advantage on attack rolls against a creature you are grappling. As an action you can try to pin it; on a success you are both restrained until the grapple ends.",
+    "source": "SRD 5.1"
+  },
+  {
+    "name": "Iron Grip",
+    "type": "Combat",
+    "prerequisites": "Grappler",
+    "benefit": "Creatures you grapple have disadvantage to escape.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Takedown",
+    "type": "Combat",
+    "prerequisites": "Iron Grip, STR 15",
+    "benefit": "When you grapple a creature, you can knock it prone as well.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Quick Step",
+    "type": "General",
+    "prerequisites": "",
+    "benefit": "Your speed increases by 10 feet.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Tumble",
+    "type": "General",
+    "prerequisites": "Quick Step, DEX 13",
+    "benefit": "You can take the Dash or Disengage action as a bonus action.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Slippery",
+    "type": "General",
+    "prerequisites": "Tumble",
+    "benefit": "Advantage to escape a grapple.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Acrobat's Leap",
+    "type": "General",
+    "prerequisites": "Tumble, character level 8",
+    "benefit": "Your jump distance doubles and you always land on your feet.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Disarm",
+    "type": "Combat",
+    "prerequisites": "Grappler, Twin Strike",
+    "benefit": "When you hit, you can disarm the target instead of dealing damage (STR saving throw).",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Feint",
+    "type": "Combat",
+    "prerequisites": "Tumble, CHA 13",
+    "benefit": "As a bonus action, you feint; your next attack against the target has advantage.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Shadow Dance",
+    "type": "Combat",
+    "prerequisites": "Feint, Slippery, character level 12",
+    "benefit": "After a feint, you can hide without needing cover.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Iron Guard",
+    "type": "Combat",
+    "prerequisites": "",
+    "benefit": "+1 to armor class while you wield a shield.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Unbreakable",
+    "type": "General",
+    "prerequisites": "Iron Guard, CON 13",
+    "benefit": "Your hit point maximum increases by 1 per level.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Shield Wall",
+    "type": "Combat",
+    "prerequisites": "Iron Guard",
+    "benefit": "As a reaction, you give an adjacent ally +2 AC against one attack.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Bulwark",
+    "type": "Combat",
+    "prerequisites": "Shield Wall, Unbreakable, character level 8",
+    "benefit": "Creatures within 5 feet of you have disadvantage on attacks against your allies.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Last Stand",
+    "type": "General",
+    "prerequisites": "Unbreakable, character level 12",
+    "benefit": "Once per long rest, you drop to 1 hit point instead of 0.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Armored Stride",
+    "type": "Combat",
+    "prerequisites": "Iron Guard, STR 13",
+    "benefit": "Heavy armor doesn't reduce your speed.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Hardy",
+    "type": "General",
+    "prerequisites": "CON 13",
+    "benefit": "+1 to CON saving throws.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Iron Will",
+    "type": "General",
+    "prerequisites": "Hardy, Steady Mind",
+    "benefit": "+1 to WIS saving throws.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Spark Adept",
+    "type": "Magic",
+    "prerequisites": "",
+    "benefit": "You learn one cantrip of your choice from any spell list.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Steady Mind",
+    "type": "Magic",
+    "prerequisites": "Spark Adept",
+    "benefit": "Advantage on saving throws to maintain concentration on a spell.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Spell Sculptor",
+    "type": "Magic",
+    "prerequisites": "Spark Adept, character level 4",
+    "benefit": "Allies inside your area spells automatically succeed on their saving throws.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Arcane Ward",
+    "type": "Magic",
+    "prerequisites": "Steady Mind, character level 8",
+    "benefit": "After casting a spell of 1st level or higher, you gain temporary hit points equal to twice its level.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Ley Sense",
+    "type": "Magic",
+    "prerequisites": "Spark Adept, WIS 13",
+    "benefit": "You sense magic within 30 feet as with detect magic.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Elemental Bane",
+    "type": "Magic",
+    "prerequisites": "Spell Sculptor, INT 13",
+    "benefit": "Your spells ignore resistance to one chosen damage type.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Battle Mage",
+    "type": "Magic",
+    "prerequisites": "Steady Mind, Shield Wall",
+    "benefit": "You can cast spells with somatic components while holding a weapon and shield.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Spellblade",
+    "type": "Magic",
+    "prerequisites": "Battle Mage, Heavy Blow, character level 8",
+    "benefit": "When you hit with a weapon, you can cast a cantrip as a bonus action.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Archmage",
+    "type": "Magic",
+    "prerequisites": "Arcane Ward, Elemental Bane, character level 16",
+    "benefit": "Once per long rest, you cast a 1st-level spell without a spell slot.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Watchful",
+    "type": "General",
+    "prerequisites": "",
+    "benefit": "+2 to initiative, and you can't be surprised while you are conscious.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Keen Senses",
+    "type": "General",
+    "prerequisites": "Watchful",
+    "benefit": "+2 to Investigation.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Field Medic",
+    "type": "General",
+    "prerequisites": "WIS 13",
+    "benefit": "As an action, you restore 1d6 + 4 hit points to a creature (once per creature per short rest).",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Polyglot",
+    "type": "General",
+    "prerequisites": "INT 13",
+    "benefit": "You learn two languages of your choice.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Fortune's Favor",
+    "type": "General",
+    "prerequisites": "",
+    "benefit": "Once per long rest, you can reroll a d20.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Rallying Leader",
+    "type": "General",
+    "prerequisites": "CHA 13, Watchful",
+    "benefit": "After a short rest, up to six allies gain temporary hit points equal to your level.",
+    "source": "Foliant examples"
+  },
+  {
+    "name": "Sentry",
+    "type": "General",
+    "prerequisites": "Keen Senses, Shield Wall",
+    "benefit": "Creatures moving within your reach provoke your reaction.",
+    "source": "Foliant examples"
+  }
+]

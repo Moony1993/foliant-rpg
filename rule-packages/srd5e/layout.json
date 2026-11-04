@@ -1,0 +1,279 @@
+{
+  "abilities": [
+    {
+      "key": "STR",
+      "label": "STÄ",
+      "name": "Stärke"
+    },
+    {
+      "key": "DEX",
+      "label": "GES",
+      "name": "Geschicklichkeit"
+    },
+    {
+      "key": "CON",
+      "label": "KON",
+      "name": "Konstitution"
+    },
+    {
+      "key": "INT",
+      "label": "INT",
+      "name": "Intelligenz"
+    },
+    {
+      "key": "WIS",
+      "label": "WEI",
+      "name": "Weisheit"
+    },
+    {
+      "key": "CHA",
+      "label": "CHA",
+      "name": "Charisma"
+    }
+  ],
+  "saves": [
+    {
+      "key": "save.STR",
+      "label": "Stärke",
+      "format": "signed",
+      "short": "STÄ"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Geschicklichkeit",
+      "format": "signed",
+      "short": "GES"
+    },
+    {
+      "key": "save.CON",
+      "label": "Konstitution",
+      "format": "signed",
+      "short": "KON"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligenz",
+      "format": "signed",
+      "short": "INT"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Weisheit",
+      "format": "signed",
+      "short": "WEI"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed",
+      "short": "CHA"
+    }
+  ],
+  "sheetStats": [
+    {
+      "key": "maxHp",
+      "label": "Trefferpunkte"
+    },
+    {
+      "key": "ac",
+      "label": "Rüstungsklasse"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "format": "signed"
+    },
+    {
+      "key": "prof",
+      "label": "Übungsbonus",
+      "format": "signed"
+    },
+    {
+      "key": "speed",
+      "label": "Bewegungsrate",
+      "format": "distance"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Wahrn."
+    },
+    {
+      "key": "attack.melee",
+      "label": "Nahkampf",
+      "format": "signed"
+    },
+    {
+      "key": "attack.ranged",
+      "label": "Fernkampf",
+      "format": "signed"
+    },
+    {
+      "key": "spellDc",
+      "label": "Zauber-SG"
+    },
+    {
+      "key": "spellAttack",
+      "label": "Zauberangriff",
+      "format": "signed"
+    },
+    {
+      "key": "carryCapacity",
+      "label": "Traglast",
+      "format": "weight"
+    },
+    {
+      "key": "save.STR",
+      "label": "Stärke",
+      "format": "signed"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Geschicklichkeit",
+      "format": "signed"
+    },
+    {
+      "key": "save.CON",
+      "label": "Konstitution",
+      "format": "signed"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligenz",
+      "format": "signed"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Weisheit",
+      "format": "signed"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed"
+    }
+  ],
+  "combatStats": [
+    {
+      "key": "prof",
+      "label": "Übungsbonus",
+      "format": "signed"
+    },
+    {
+      "key": "save.STR",
+      "label": "Stärke",
+      "format": "signed"
+    },
+    {
+      "key": "attack.melee",
+      "label": "Nahkampf",
+      "format": "signed"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Geschicklichkeit",
+      "format": "signed"
+    },
+    {
+      "key": "attack.ranged",
+      "label": "Fernkampf",
+      "format": "signed"
+    },
+    {
+      "key": "save.CON",
+      "label": "Konstitution",
+      "format": "signed"
+    },
+    {
+      "key": "spellDc",
+      "label": "Zauber-SG"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligenz",
+      "format": "signed"
+    },
+    {
+      "key": "speed",
+      "label": "Bewegung",
+      "format": "distance"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Weisheit",
+      "format": "signed"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Wahrnehmung"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed"
+    }
+  ],
+  "partyStats": [
+    {
+      "key": "ac",
+      "label": "Rüstungsklasse",
+      "short": "RK"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "format": "signed",
+      "short": "Ini"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Wahrnehmung",
+      "short": "Wahrn."
+    },
+    {
+      "key": "save.DEX",
+      "label": "GES-Rettungswurf",
+      "format": "signed",
+      "short": "GES"
+    },
+    {
+      "key": "save.CON",
+      "label": "KON-Rettungswurf",
+      "format": "signed",
+      "short": "KON"
+    },
+    {
+      "key": "save.WIS",
+      "label": "WEI-Rettungswurf",
+      "format": "signed",
+      "short": "WEI"
+    },
+    {
+      "key": "spellDc",
+      "label": "Zauber-SG",
+      "short": "SG"
+    }
+  ],
+  "armorDetail": "Übungsbonus +{prof} · Zauber-SG {spellDc}",
+  "quickStats": [
+    {
+      "key": "ac",
+      "label": "Rüstungsklasse",
+      "short": "RK",
+      "icon": "shield"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "short": "Init",
+      "format": "signed",
+      "icon": "zap"
+    },
+    {
+      "key": "prof",
+      "label": "Übungsbonus",
+      "short": "ÜB",
+      "format": "signed",
+      "icon": "star"
+    }
+  ]
+}

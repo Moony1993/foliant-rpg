@@ -1,0 +1,202 @@
+/* Spellbook look for the spells page: leather binding, parchment pages, ribbons, candles,
+   gems, page-turn and rest animations. Everything is scoped under .sb. Colors, fonts and the
+   Ostell corners follow the app-wide grimoire theme (index.css); fonts load in index.html. */
+
+.sb {
+  --ink: #1f1209; --ink-soft: #4a3220; --rubric: #7d1414; --gold: #a87a1f; --gold-hi: #e8c873;
+  --vellum: #f7edd5; --leather: #3b2416; --leather-dk: #1f120a;
+  --corner: 32px;
+  font-family: 'Lora', Georgia, serif;
+}
+
+/* Leather binding */
+.sb-book {
+  /* Same calf leather as the navigation spine (generated photo, mirrored into a seamless tile),
+     framed by its gold roll border on all four sides (border-image cut from the spine tile). */
+  position: relative; padding: 4px; perspective: 2200px;
+  border: 18px solid transparent; border-image: url('../assets/spine/frame.jpg') 56 round;
+  background: #2e1b0f url('../assets/spine/leather-plain.jpg') center / 400px repeat;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+}
+.sb-spread { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1024px) { .sb-spread { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+/* Parchment page */
+.sb-page {
+  /* Fixed page height: a page turn must not resize the book (content length differs per
+     chapter). Long chapters scroll inside the page; the footer stays pinned at the bottom. */
+  position: relative; height: max(480px, calc(100dvh - 215px)); overflow-y: auto; overscroll-behavior: contain;
+  display: flex; flex-direction: column; color: var(--ink);
+  /* Page shading is drawn as gradients (not an inset box-shadow) so the sticky footer can repeat
+     exactly the same layers and blend in instead of showing a flat, lighter strip. */
+  --spine: linear-gradient(270deg, rgba(60,35,10,.32), rgba(60,35,10,0) 14px);
+  --shade-x: linear-gradient(90deg, rgba(110,70,20,.24), rgba(110,70,20,0) 38px, rgba(110,70,20,0) calc(100% - 38px), rgba(110,70,20,.24));
+  --shade-b: linear-gradient(0deg, rgba(110,70,20,.24), rgba(110,70,20,0) 38px);
+  --grain: repeating-linear-gradient(0deg, rgba(90,60,20,.025) 0 2px, transparent 2px 4px);
+  background:
+    url('../assets/ornaments/ostell-tl.png') top 8px left 8px / var(--corner) no-repeat,
+    url('../assets/ornaments/ostell-tr.png') top 8px right 8px / var(--corner) no-repeat,
+    url('../assets/ornaments/ostell-bl.png') bottom 8px left 8px / var(--corner) no-repeat,
+    url('../assets/ornaments/ostell-br.png') bottom 8px right 8px / var(--corner) no-repeat,
+    var(--spine), var(--shade-x), var(--shade-b),
+    linear-gradient(180deg, rgba(110,70,20,.24), rgba(110,70,20,0) 38px),
+    radial-gradient(circle at 18% 12%, rgba(140,90,30,.13), transparent 35%),
+    radial-gradient(circle at 85% 40%, rgba(140,90,30,.10), transparent 40%),
+    var(--grain), var(--vellum);
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  border-radius: 4px 10px 10px 4px; padding: 46px var(--page-x) 0; --page-x: 26px;
+  backface-visibility: hidden; transform-origin: left center; touch-action: pan-y;
+}
+@media (min-width: 1024px) { .sb-page { height: min(calc(100dvh - 140px), 860px); } }
+/* Phones: a slimmer frame and margin leave the text ~40px more room. */
+@media (max-width: 480px) { .sb-book { border-width: 10px; padding: 2px; } .sb-page { --page-x: 16px; } }
+.sb-page--right { border-radius: 10px 4px 4px 10px; --spine: linear-gradient(90deg, rgba(60,35,10,.32), rgba(60,35,10,0) 14px); }
+
+/* Ribbon bookmarks */
+.sb-ribbons { position: absolute; top: 0; left: 14px; right: 14px; display: flex; gap: 5px; z-index: 3; overflow-x: auto; scrollbar-width: none; }
+.sb-ribbon {
+  flex: 0 0 auto; min-width: 32px; height: 30px; padding: 3px 5px 0; border: 0; cursor: pointer; color: #fbeccc;
+  font: 700 12px 'Lora', serif; background: linear-gradient(90deg, #6e1414, #a32222 50%, #6e1414);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); transition: height .25s; box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+.sb-ribbon--gold { background: linear-gradient(90deg, #8a6418, #d4af37 50%, #8a6418); color: #2a1a08; }
+.sb-ribbon--blue { background: linear-gradient(90deg, #1d3a6e, #2f5aa8 50%, #1d3a6e); }
+.sb-ribbon--violet { background: linear-gradient(90deg, #4a1d6e, #7a3aa8 50%, #4a1d6e); }
+.sb-ribbon[aria-current='true'] { height: 42px; }
+
+/* Headings */
+.sb-kapitel { font: 700 13px 'Lora', serif; font-variant: small-caps; letter-spacing: .1em; color: var(--rubric); text-align: center; }
+.sb-title { font: 700 22px/1.15 'Cinzel', serif; text-align: center; margin: 4px 0 6px; color: var(--ink); }
+.sb-flourish { display: block; margin: 0 auto 10px; width: 180px; height: 16px; color: var(--gold); }
+.sb-intro { font-size: 16px; line-height: 1.5; margin: 0 0 10px; display: flow-root; }
+.sb-intro::first-letter { float: left; font: 54px/0.8 'UnifrakturMaguntia', serif; color: var(--rubric); margin: 4px 6px 0 0; text-shadow: 1px 1px 0 var(--gold); }
+.sb-sub { font: 700 14px 'Lora', serif; font-variant: small-caps; letter-spacing: .04em; color: var(--rubric); margin: 14px 0 2px; display: flex; justify-content: space-between; align-items: center; }
+.sb-desc { font-size: 16px; line-height: 1.5; margin: 0 0 12px; font-style: italic; white-space: pre-line; }
+.sb-hint { font: italic 13.5px 'Lora', serif; color: var(--ink-soft); text-align: center; margin-top: 8px; }
+
+/* Entries */
+.sb-entry { width: 100%; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 0; border: 0; border-bottom: 1px solid rgba(110,70,30,.22); background: none; color: inherit; text-align: left; cursor: pointer; font: inherit; }
+.sb-entry:last-of-type { border-bottom: 0; }
+.sb-entry[aria-pressed='true'] .sb-name { color: var(--rubric); }
+.sb-seal {
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; color: #f6dcc0; font: 700 13px 'Cinzel', serif;
+  background: radial-gradient(circle at 35% 30%, #c8402f, #8b1a1a 60%, #5d0f0f); box-shadow: 0 1px 2px rgba(0,0,0,.4), inset 0 0 0 3px rgba(0,0,0,.12);
+}
+.sb-name { font: 600 16.5px/1.2 'Lora', serif; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sb-meta { font-size: 13.5px; font-style: italic; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sb-times { font: 600 13px 'Lora', serif; color: var(--rubric); white-space: nowrap; }
+.sb-times--dim { color: var(--ink-soft); }
+.sb-empty { margin-top: 10px; padding: 9px; border: 1.5px dashed rgba(139,26,26,.45); border-radius: 6px; text-align: center; font-style: italic; color: var(--rubric); }
+
+/* Candles (one per prepared copy) and gems (spontaneous slots) */
+.sb-candles { display: flex; gap: 3px; flex-wrap: wrap; justify-content: flex-end; max-width: 90px; }
+.sb-candle { width: 14px; height: 30px; overflow: visible; }
+.sb-flame { transform-origin: 7px 9px; animation: sb-flicker 1.6s ease-in-out infinite; }
+.sb-candle--out .sb-flame { display: none; }
+.sb-smoke { opacity: 0; }
+.sb-candle--puff .sb-smoke { animation: sb-smoke 1.2s ease-out; }
+@keyframes sb-flicker { 0%,100% { transform: scale(1) rotate(-2deg); opacity: 1 } 40% { transform: scale(.88,1.08) rotate(3deg); opacity: .9 } 70% { transform: scale(1.05,.95) rotate(-1deg) } }
+@keyframes sb-smoke { 0% { opacity: .7; transform: translateY(0) } 100% { opacity: 0; transform: translateY(-14px) scale(1.6) } }
+.sb-gems { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 2px 0 10px; }
+.sb-gems--small { justify-content: flex-end; gap: 3px; margin: 0; }
+.sb-gem { width: 20px; height: 24px; transition: filter .4s, opacity .4s; filter: drop-shadow(0 0 4px rgba(80,140,255,.7)); }
+.sb-gems--small .sb-gem { width: 12px; height: 15px; }
+.sb-gem--spent { filter: grayscale(1) brightness(.75); opacity: .55; }
+
+/* Buttons */
+.sb-btn { font: 600 15px 'Lora', serif; padding: 2px 6px; cursor: pointer; border: 10px solid transparent; border-image-slice: 31 fill; border-image-width: 12px; background: none; filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.35)); }
+.sb-btn:disabled { opacity: .4; cursor: default; }
+.sb-btn--ink { color: #f3dfb0; text-shadow: 0 1px 0 #000; border-image-source: url('../assets/buttons/red.png'); }
+.sb-btn--gold { color: #3a2408; text-shadow: 0 1px 0 rgba(255,240,190,.6); border-image-source: url('../assets/buttons/brass.png'); }
+.sb-btn--line { color: #3a2408; border-image-source: url('../assets/buttons/vellum.png'); }
+.sb-foot {
+  position: sticky; bottom: 0; margin: auto calc(-1 * var(--page-x)) 0; padding: 18px var(--page-x) 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  isolation: isolate;
+}
+/* The footer repeats the page's own layers (it spans the full page width, so they line up) and
+   fades them in from the top: scrolled text vanishes beneath it without a visible strip. */
+.sb-foot::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    url('../assets/ornaments/ostell-bl.png') bottom 8px left 8px / var(--corner) no-repeat,
+    url('../assets/ornaments/ostell-br.png') bottom 8px right 8px / var(--corner) no-repeat,
+    var(--spine), var(--shade-x), var(--shade-b), var(--grain), var(--vellum);
+  -webkit-mask-image: linear-gradient(transparent, #000 40%); mask-image: linear-gradient(transparent, #000 40%);
+}
+.sb-pageno { font: italic 13px 'Lora', serif; color: var(--ink-soft); }
+.sb-stat { display: grid; grid-template-columns: 110px minmax(0, 1fr); font-size: 15.5px; padding: 3px 0; }
+.sb-stat b { font: 700 14px 'Lora', serif; font-variant: small-caps; color: var(--rubric); padding-top: 1px; }
+.sb-input { width: 100%; font: 15px 'Lora', serif; color: var(--ink); background: rgba(255,250,235,.6); border: 1px solid rgba(110,70,30,.4); border-radius: 6px; padding: 7px 10px; }
+.sb-input:focus { outline: 2px solid var(--gold); }
+.sb-label { display: block; font: 700 13px 'Lora', serif; font-variant: small-caps; letter-spacing: .04em; color: var(--rubric); margin: 8px 0 3px; }
+
+/* Page turn: a two-sided leaf (front = page content, back = blank vellum) rotates 180° around
+   the spine and lands on top of the other page. Perspective must sit on the leaf's direct
+   parent (.sb-turn), otherwise the 3D rotation flattens into a sideways squash. */
+.sb-turn { position: relative; z-index: 2;
+  /* Perspective scales with the page width (≈ 9.5× like on a phone): with a fixed value, the wide
+     page on a tablet swings much closer to the viewer and visibly balloons during the turn. */
+  perspective: max(3600px, calc(9.5 * (100vw - 32px))); }
+@media (min-width: 1024px) { .sb-turn { perspective: max(3600px, calc(4.75 * (100vw - 260px))); } }
+.sb-flipper { position: absolute; inset: 0; z-index: 5; pointer-events: none; transform-style: preserve-3d; transform-origin: left center; }
+.sb-flipper--spine-right { transform-origin: right center; }
+.sb-face { position: absolute !important; inset: 0; height: auto !important; overflow: hidden !important; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.sb-face--back { transform: rotateY(180deg); }
+.sb-face::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(40,20,5,.45), rgba(40,20,5,0) 60%); opacity: 0; animation: sb-shade .8s ease-in-out forwards; }
+.sb-flipper--spine-right .sb-face::after { background: linear-gradient(270deg, rgba(40,20,5,.45), rgba(40,20,5,0) 60%); }
+@keyframes sb-shade { 50% { opacity: 1 } 100% { opacity: 0 } }
+.sb-turn-away { animation: sb-turn-away .8s cubic-bezier(.45,.05,.35,1) forwards; }
+.sb-turn-in { animation: sb-turn-in .8s cubic-bezier(.45,.05,.35,1) forwards; }
+@keyframes sb-turn-away { from { transform: rotateY(0) } 85% { opacity: 1 } to { transform: rotateY(var(--sb-angle)); opacity: 0 } }
+@keyframes sb-turn-in { from { transform: rotateY(var(--sb-angle)) } to { transform: rotateY(0) } }
+
+/* Rest: the cover closes and reopens */
+.sb-cover {
+  position: absolute; inset: 0; z-index: 8; border-radius: 16px; transform-origin: left center; transform: rotateY(-100deg); opacity: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 40%, transparent 50%, rgba(0,0,0,.4)), #2e1b0f url('../assets/spine/leather-plain.jpg') center / 400px repeat; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+  display: grid; place-items: center;
+}
+.sb-cover::before { content: ''; position: absolute; inset: 10px; border: 1px solid rgba(214,170,80,.7); box-shadow: inset 0 0 0 3px rgba(0,0,0,.2), inset 0 0 0 4px rgba(214,170,80,.45); border-radius: 10px; }
+/* The title sits on the red leather label from the spine. */
+.sb-cover span { font: 700 26px 'Cinzel', serif; color: var(--gold-hi); text-shadow: 0 1px 0 #000; padding: 14px 34px; background: #6b1a12 url('../assets/spine/label.jpg') center / 100% 100% no-repeat; box-shadow: 0 2px 6px rgba(0,0,0,.6); }
+.sb-cover--closing { animation: sb-close-open 1.8s ease-in-out forwards; }
+@keyframes sb-close-open { 0% { transform: rotateY(-100deg); opacity: 0 } 10% { opacity: 1 } 35% { transform: rotateY(0) } 65% { transform: rotateY(0); opacity: 1 } 100% { transform: rotateY(-100deg); opacity: 0 } }
+
+/* Bottom sheets (spell page on phones, library) */
+.sb-sheet-bg { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 50; display: flex; align-items: flex-end; justify-content: center; }
+@media (min-width: 1024px) { .sb-sheet-bg { align-items: center; } }
+.sb-sheet { width: 100%; max-width: 560px; max-height: 85dvh; overflow-y: auto; border-radius: 14px 14px 0 0; padding: 18px 18px calc(22px + env(safe-area-inset-bottom)); animation: sb-rise .3s ease-out; }
+@media (min-width: 1024px) { .sb-sheet { border-radius: 12px; } }
+.sb-sheet.sb-page { height: auto; display: block; }
+@keyframes sb-rise { from { transform: translateY(40px); opacity: 0 } }
+.sb-library { background: linear-gradient(rgba(20,11,5,.55), rgba(20,11,5,.75)), #2e1b0f url('../assets/spine/leather-plain.jpg') center / 400px repeat; color: #f3e3c2; }
+.sb-library h2 { font: 700 20px 'Cinzel', serif; margin: 0 0 4px; color: var(--gold-hi); }
+.sb-card { margin-top: 10px; padding: 12px 14px; border-radius: 4px; color: var(--ink); background: var(--vellum); box-shadow: inset 0 0 20px rgba(110,70,20,.35), 0 3px 8px rgba(0,0,0,.4); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+.sb-ink-in { animation: sb-ink-in 1s ease-out; }
+@keyframes sb-ink-in { from { filter: blur(3px); opacity: 0; clip-path: inset(0 100% 0 0) } to { filter: none; opacity: 1; clip-path: inset(0 0 0 0) } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sb-flame, .sb-turn-away, .sb-turn-in, .sb-cover--closing, .sb-ink-in, .sb-sheet { animation-duration: .01ms !important; }
+}
+
+/* Talent tree (feats page): WoW-style grid of wax seals on the parchment page, linked by
+   right-angled ink lines. Gold = learnable, red wax = learned, faded = prerequisites missing. */
+.ft-grid { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 96px; }
+.ft-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.ft-node { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 2px 0; border: 0; background: none; cursor: pointer; font: inherit; color: inherit; min-width: 0; position: relative; z-index: 1; }
+.ft-seal {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font: 700 14px 'Cinzel', serif;
+  color: #8a7458; background: radial-gradient(circle at 35% 30%, #efe2c4, #d6c39c 60%, #bfa878);
+  box-shadow: inset 0 0 0 2px rgba(110,70,30,.35), 0 1px 2px rgba(0,0,0,.25);
+}
+.ft-node.av .ft-seal { color: #3a2408; background: radial-gradient(circle at 35% 30%, #fbe7a6, #d4af37 55%, #8a6418); box-shadow: 0 0 0 2px #8a6418, 0 0 12px rgba(212,175,55,.75); }
+.ft-node.on .ft-seal { color: #f6dcc0; background: radial-gradient(circle at 35% 30%, #c8402f, #8b1a1a 60%, #5d0f0f); box-shadow: 0 1px 3px rgba(0,0,0,.45), inset 0 0 0 3px rgba(0,0,0,.12), 0 0 0 2px var(--gold); }
+.ft-node.lock { opacity: .55; }
+.ft-node.ghost .ft-seal { background: none; box-shadow: inset 0 0 0 2px rgba(110,70,30,.45); border: 0; outline: 2px dashed rgba(110,70,30,.45); outline-offset: -2px; }
+.ft-name { font: 600 11px/1.15 'Lora', serif; text-align: center; hyphens: auto; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ft-node.on .ft-name { color: var(--rubric); }
+.ft-node.ghost .ft-name { font-style: italic; font-weight: 400; color: var(--ink-soft); }
+.ft-pts { position: absolute; top: 38px; left: calc(50% + 12px); font: 700 9.5px 'Lora', serif; padding: 0 3px; border-radius: 3px; background: var(--vellum); color: var(--ink-soft); box-shadow: 0 0 0 1px rgba(110,70,30,.45); }
+.ft-node.on .ft-pts { color: var(--rubric); }
+.ft-node.av .ft-pts { color: #6b4a10; }
+.ft-emblem { display: block; width: 84px; height: 84px; margin: 2px auto 4px; filter: drop-shadow(0 2px 3px rgba(60,35,10,.35)); }

@@ -1,0 +1,373 @@
+[
+  {
+    "name": "Wuchtiger Schlag",
+    "type": "Kampf",
+    "prerequisites": "STÄ 13",
+    "benefit": "Einmal pro Zug, wenn du mit einem Nahkampf-Waffenangriff triffst, verursachst du 1W4 zusätzlichen Schaden.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Bogenhieb",
+    "type": "Kampf",
+    "prerequisites": "Wuchtiger Schlag",
+    "benefit": "Bringt dein Nahkampfangriff eine Kreatur auf 0 TP, kannst du dich als Bonusaktion 1,5 m bewegen und eine andere Kreatur angreifen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Sturmangriff",
+    "type": "Kampf",
+    "prerequisites": "Bogenhieb, Charakterstufe 8",
+    "benefit": "Bewegst du dich mindestens 6 m geradeaus und triffst dann, muss das Ziel einen STÄ-Rettungswurf bestehen oder wird umgestoßen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Scharfrichter",
+    "type": "Kampf",
+    "prerequisites": "Sturmangriff, Charakterstufe 12",
+    "benefit": "Deine Nahkampfangriffe gegen liegende Kreaturen sind bei 19–20 kritische Treffer.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Zwillingshieb",
+    "type": "Kampf",
+    "prerequisites": "GES 13",
+    "benefit": "Beim Kampf mit zwei Waffen addierst du deinen Attributsmodifikator zum Schaden der Bonusangriffs.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Stahlwirbel",
+    "type": "Kampf",
+    "prerequisites": "Zwillingshieb",
+    "benefit": "+1 auf die RK, solange du in jeder Hand eine Nahkampfwaffe führst.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Wirbelsturm",
+    "type": "Kampf",
+    "prerequisites": "Stahlwirbel, Bogenhieb, Charakterstufe 12",
+    "benefit": "Mit einer Aktion greifst du jede Kreatur in Reichweite einmal an.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Schildstoß",
+    "type": "Kampf",
+    "prerequisites": "Wuchtiger Schlag, Eiserne Deckung",
+    "benefit": "Als Bonusaktion stößt du eine Kreatur mit dem Schild 1,5 m zurück.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Klingenparade",
+    "type": "Kampf",
+    "prerequisites": "Zwillingshieb, Eiserne Deckung",
+    "benefit": "Als Reaktion erhöhst du deine RK gegen einen Nahkampfangriff um deinen Übungsbonus.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Riposte",
+    "type": "Kampf",
+    "prerequisites": "Klingenparade, Charakterstufe 8",
+    "benefit": "Verfehlt dich ein Nahkampfangriff nach einer Klingenparade, kannst du sofort zurückschlagen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Ruhige Hand",
+    "type": "Kampf",
+    "prerequisites": "GES 13",
+    "benefit": "Deine Fernkampfangriffe ignorieren halbe Deckung.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Falkenauge",
+    "type": "Allgemein",
+    "prerequisites": "Ruhige Hand",
+    "benefit": "+2 auf Wahrnehmung.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Pfeilhagel",
+    "type": "Kampf",
+    "prerequisites": "Falkenauge, Charakterstufe 8",
+    "benefit": "Einmal pro kurzer Rast greifst du jede Kreatur in 3 m um einen Punkt in Reichweite an.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Schnellzieher",
+    "type": "Kampf",
+    "prerequisites": "Ruhige Hand",
+    "benefit": "Ziehen und Wegstecken einer Waffe kostet dich nichts.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Nahschütze",
+    "type": "Kampf",
+    "prerequisites": "Ruhige Hand",
+    "benefit": "Keine Nachteile bei Fernkampfangriffen gegen Kreaturen innerhalb von 1,5 m.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Todesblick",
+    "type": "Kampf",
+    "prerequisites": "Falkenauge, Nahschütze",
+    "benefit": "Deine Fernkampfangriffe ignorieren auch Dreivierteldeckung.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Abpraller",
+    "type": "Kampf",
+    "prerequisites": "Todesblick, Charakterstufe 12",
+    "benefit": "Verfehlt dein Fernkampfangriff, kannst du ein zweites Ziel in 3 m Umkreis angreifen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Wurfmeister",
+    "type": "Kampf",
+    "prerequisites": "Schnellzieher, Wuchtiger Schlag",
+    "benefit": "Wurfwaffen verursachen 1W4 zusätzlichen Schaden.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Salve",
+    "type": "Kampf",
+    "prerequisites": "Pfeilhagel, Schnellzieher, Charakterstufe 16",
+    "benefit": "Mit einer Aktion machst du drei Fernkampfangriffe mit −2.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Ringer",
+    "type": "Kampf",
+    "prerequisites": "STÄ 13",
+    "benefit": "Vorteil auf Angriffswürfe gegen eine Kreatur, die du gepackt hältst. Mit einer Aktion kannst du versuchen, sie festzusetzen; bei Erfolg seid ihr beide festgesetzt, bis der Haltegriff endet.",
+    "source": "SRD 5.1"
+  },
+  {
+    "name": "Eisengriff",
+    "type": "Kampf",
+    "prerequisites": "Ringer",
+    "benefit": "Kreaturen, die du gepackt hältst, haben Nachteil, sich zu befreien.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Niederwerfen",
+    "type": "Kampf",
+    "prerequisites": "Eisengriff, STÄ 15",
+    "benefit": "Packst du eine Kreatur, kannst du sie zugleich umstoßen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Flinker Schritt",
+    "type": "Allgemein",
+    "prerequisites": "",
+    "benefit": "Deine Bewegungsrate steigt um 3 m.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Abrollen",
+    "type": "Allgemein",
+    "prerequisites": "Flinker Schritt, GES 13",
+    "benefit": "Du kannst Spurt oder Rückzug als Bonusaktion ausführen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Aalglatt",
+    "type": "Allgemein",
+    "prerequisites": "Abrollen",
+    "benefit": "Vorteil, um dich aus einem Haltegriff zu befreien.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Akrobatensprung",
+    "type": "Allgemein",
+    "prerequisites": "Abrollen, Charakterstufe 8",
+    "benefit": "Deine Sprungweite verdoppelt sich, und du landest immer auf den Füßen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Entwaffnen",
+    "type": "Kampf",
+    "prerequisites": "Ringer, Zwillingshieb",
+    "benefit": "Triffst du, kannst du statt Schaden das Ziel entwaffnen (STÄ-Rettungswurf).",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Finte",
+    "type": "Kampf",
+    "prerequisites": "Abrollen, CHA 13",
+    "benefit": "Als Bonusaktion täuschst du ein Ziel; dein nächster Angriff hat Vorteil.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Schattentanz",
+    "type": "Kampf",
+    "prerequisites": "Finte, Aalglatt, Charakterstufe 12",
+    "benefit": "Nach einer Finte kannst du dich verstecken, ohne Deckung zu brauchen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Eiserne Deckung",
+    "type": "Kampf",
+    "prerequisites": "",
+    "benefit": "+1 auf die Rüstungsklasse, solange du einen Schild trägst.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Unverwüstlich",
+    "type": "Allgemein",
+    "prerequisites": "Eiserne Deckung, KON 13",
+    "benefit": "Dein Trefferpunktemaximum steigt um 1 pro Stufe.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Schildwall",
+    "type": "Kampf",
+    "prerequisites": "Eiserne Deckung",
+    "benefit": "Als Reaktion gibst du einem Verbündeten neben dir +2 RK gegen einen Angriff.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Bollwerk",
+    "type": "Kampf",
+    "prerequisites": "Schildwall, Unverwüstlich, Charakterstufe 8",
+    "benefit": "Kreaturen in 1,5 m um dich haben Nachteil auf Angriffe gegen deine Verbündeten.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Letztes Gefecht",
+    "type": "Allgemein",
+    "prerequisites": "Unverwüstlich, Charakterstufe 12",
+    "benefit": "Einmal pro langer Rast fällst du statt auf 0 auf 1 Trefferpunkt.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Rüstungsgang",
+    "type": "Kampf",
+    "prerequisites": "Eiserne Deckung, STÄ 13",
+    "benefit": "Schwere Rüstung verringert deine Bewegung nicht.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Zähe Natur",
+    "type": "Allgemein",
+    "prerequisites": "KON 13",
+    "benefit": "+1 auf KON-Rettungswürfe.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Eiserner Wille",
+    "type": "Allgemein",
+    "prerequisites": "Zähe Natur, Gefestigter Geist",
+    "benefit": "+1 auf WEI-Rettungswürfe.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Funkenkundig",
+    "type": "Magie",
+    "prerequisites": "",
+    "benefit": "Du lernst einen Zaubertrick deiner Wahl aus einer beliebigen Zauberliste.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Gefestigter Geist",
+    "type": "Magie",
+    "prerequisites": "Funkenkundig",
+    "benefit": "Vorteil auf Rettungswürfe, um die Konzentration auf einen Zauber aufrechtzuerhalten.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Zauberformer",
+    "type": "Magie",
+    "prerequisites": "Funkenkundig, Charakterstufe 4",
+    "benefit": "Verbündete in deinen Flächenzaubern bestehen ihre Rettungswürfe automatisch.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Arkaner Schild",
+    "type": "Magie",
+    "prerequisites": "Gefestigter Geist, Charakterstufe 8",
+    "benefit": "Nach einem Zauber des 1. Grades oder höher erhältst du temporäre TP in Höhe des Zaubergrads × 2.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Leylinienspür",
+    "type": "Magie",
+    "prerequisites": "Funkenkundig, WEI 13",
+    "benefit": "Du spürst Magie in 9 m Umkreis wie mit „Magie entdecken“.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Elementarbann",
+    "type": "Magie",
+    "prerequisites": "Zauberformer, INT 13",
+    "benefit": "Deine Zauber ignorieren Resistenz gegen eine gewählte Schadensart.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Kampfzauberer",
+    "type": "Magie",
+    "prerequisites": "Gefestigter Geist, Schildwall",
+    "benefit": "Du kannst Zauber mit Gesten wirken, auch wenn du Waffe und Schild hältst.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Spruchklinge",
+    "type": "Magie",
+    "prerequisites": "Kampfzauberer, Wuchtiger Schlag, Charakterstufe 8",
+    "benefit": "Triffst du mit einer Waffe, kannst du als Bonusaktion einen Zaubertrick wirken.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Erzmagier",
+    "type": "Magie",
+    "prerequisites": "Arkaner Schild, Elementarbann, Charakterstufe 16",
+    "benefit": "Einmal pro langer Rast wirkst du einen Zauber des 1. Grades ohne Zauberplatz.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Wachsam",
+    "type": "Allgemein",
+    "prerequisites": "",
+    "benefit": "+2 auf Initiative, und du kannst nicht überrascht werden, solange du bei Bewusstsein bist.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Scharfe Sinne",
+    "type": "Allgemein",
+    "prerequisites": "Wachsam",
+    "benefit": "+2 auf Nachforschungen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Erste Hilfe",
+    "type": "Allgemein",
+    "prerequisites": "WEI 13",
+    "benefit": "Mit einer Aktion stellst du einer Kreatur 1W6 + 4 TP wieder her (einmal pro Kreatur und kurzer Rast).",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Vielsprachig",
+    "type": "Allgemein",
+    "prerequisites": "INT 13",
+    "benefit": "Du lernst zwei Sprachen deiner Wahl.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Glückskind",
+    "type": "Allgemein",
+    "prerequisites": "",
+    "benefit": "Einmal pro langer Rast darfst du einen W20-Wurf wiederholen.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Anführer",
+    "type": "Allgemein",
+    "prerequisites": "CHA 13, Wachsam",
+    "benefit": "Nach einer kurzen Rast erhalten bis zu sechs Verbündete temporäre TP in Höhe deiner Stufe.",
+    "source": "Foliant-Beispiele"
+  },
+  {
+    "name": "Wachposten",
+    "type": "Allgemein",
+    "prerequisites": "Scharfe Sinne, Schildwall",
+    "benefit": "Kreaturen, die sich in deiner Reichweite bewegen, provozieren deine Reaktion.",
+    "source": "Foliant-Beispiele"
+  }
+]

@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/*.db*
+backend/wwwroot/uploads/
+backend/vapid-keys.json
+.git/
+.claude/
+tests/
+.env

@@ -1,0 +1,36 @@
+{
+  "name": "Barde 2, Mensch, Alleskönner",
+  "character": {
+    "level": 2,
+    "classes": [
+      {
+        "classId": "bard",
+        "level": 2
+      }
+    ],
+    "abilities": {
+      "STR": 9,
+      "DEX": 14,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 15
+    },
+    "choices": {
+      "bard/skills": "deception,persuasion,performance"
+    },
+    "facts": {
+      "armor.type": "none"
+    },
+    "ancestry": "human"
+  },
+  "expect": {
+    "STR": 10,
+    "CHA": 16,
+    "skill.athletics": 1,
+    "skill.deception": 5,
+    "spellDc": 13,
+    "save.CHA": 5,
+    "save.DEX": 4
+  }
+}

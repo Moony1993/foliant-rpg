@@ -1,0 +1,10 @@
+{
+  "name": "Gelehrter Stufe 6, benommen",
+  "character": {
+    "level": 6,
+    "classes": [ { "classId": "gelehrte", "level": 6 } ],
+    "abilities": { "STR": 9, "DEX": 10, "CON": 10, "INT": 17, "WIS": 13, "CHA": 11 },
+    "conditions": ["benommen"]
+  },
+  "expect": { "bonus": 3, "maxHp": 26, "attack": 1, "save.Mind": 2, "passivePerception": 11 }
+}

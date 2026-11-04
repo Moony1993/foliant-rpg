@@ -1,0 +1,50 @@
+{
+  // Six abilities on a 3–18 scale; every 3 points above 9 give +1.
+  "abilities": ["STR", "DEX", "CON", "INT", "WIS", "CHA"],
+  "abilityModifier": "floor((score - 9) / 3)",
+  "stacking": { "rule": "sum" },
+  "tables": {
+    "bonus": [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+  },
+  "stats": [
+    { "key": "bonus", "expr": "table('bonus', level)" },
+    { "key": "maxHp", "expr": "8 + level * (3 + mod(CON))" },
+    { "key": "initiative", "expr": "mod(DEX)" },
+    { "key": "ac", "expr": "10 + mod(DEX)", "plus": "item.Armor" },
+    { "key": "attack", "expr": "mod(STR) + bonus" },
+    { "key": "save.Body", "expr": "mod(CON) + bonus" },
+    { "key": "save.Mind", "expr": "mod(WIS) + bonus" },
+    { "key": "speed", "expr": "30" },
+    { "key": "carryCapacity", "expr": "STR * 10" },
+    { "key": "passivePerception", "expr": "8 + mod(WIS) + (has('feature:wachsam') ? 2 : 0)" }
+  ],
+  "conditions": [
+    { "id": "benommen", "name": "Benommen", "icon": "💫", "text": "−2 auf Angriff und Widerstände.",
+      "modifiers": [ { "target": "attack", "value": "-2" }, { "target": "save.*", "value": "-2" } ] }
+  ],
+  "classes": [
+    {
+      "id": "kaempfer", "name": "Kämpfer", "hitDie": 10,
+      "levels": { "1": { "features": ["zaeh"] }, "2": { "features": ["stil"] } },
+      "features": {
+        "zaeh": { "name": "Zäh", "text": "+1 Trefferpunkt pro Stufe.", "modifiers": [ { "target": "maxHp", "value": "level" } ] },
+        "stil": {
+          "name": "Kampfstil", "text": "Wähle, worauf du dich verlässt.",
+          "choice": { "pick": 1, "options": [
+            { "id": "schild", "name": "Schild", "modifiers": [ { "target": "ac", "value": "1" } ] },
+            { "id": "waffe", "name": "Waffe", "modifiers": [ { "target": "attack", "value": "1" } ] }
+          ] }
+        }
+      }
+    },
+    {
+      "id": "gelehrte", "name": "Gelehrte", "hitDie": 6,
+      "levels": { "1": { "features": ["wachsam", "einfall"] } },
+      "features": {
+        "wachsam": { "name": "Wachsam", "text": "+2 auf passive Wahrnehmung." },
+        "einfall": { "name": "Geistesblitz", "text": "Einmal pro Rast einen Wurf wiederholen, später öfter.",
+          "resource": { "id": "einfall", "name": "Geistesblitz", "max": "1 + floor(level / 3)", "reset": "long" } }
+      }
+    }
+  ]
+}

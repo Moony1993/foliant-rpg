@@ -1,0 +1,39 @@
+{
+  "name": "Schurke 1, Leichtfuß-Halbling, Expertise Heimlichkeit",
+  "character": {
+    "level": 1,
+    "classes": [
+      {
+        "classId": "rogue",
+        "level": 1
+      }
+    ],
+    "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 12,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+    },
+    "choices": {
+      "rogue/skills": "stealth,acrobatics,perception,deception",
+      "rogue/expertise": "stealth,perception"
+    },
+    "facts": {
+      "armor.type": "light",
+      "armor.base": 11
+    },
+    "ancestry": "lightfoot_halfling"
+  },
+  "expect": {
+    "DEX": 17,
+    "ac": 14,
+    "speed": 25,
+    "skill.stealth": 7,
+    "skill.acrobatics": 5,
+    "passivePerception": 14,
+    "save.DEX": 5,
+    "save.INT": 3
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Kämpfer 1, Mensch, Kettenpanzer + Schild, Verteidigung",
+  "character": {
+    "level": 1,
+    "classes": [
+      {
+        "classId": "fighter",
+        "level": 1
+      }
+    ],
+    "abilities": {
+      "STR": 15,
+      "DEX": 14,
+      "CON": 14,
+      "INT": 9,
+      "WIS": 12,
+      "CHA": 10
+    },
+    "choices": {
+      "fighter/skills": "athletics,perception",
+      "fighter/style": "defense"
+    },
+    "facts": {
+      "armor.type": "heavy",
+      "armor.base": 16,
+      "shield.bonus": 2,
+      "shield.equipped": true
+    },
+    "ancestry": "human"
+  },
+  "expect": {
+    "prof": 2,
+    "STR": 16,
+    "maxHp": 12,
+    "ac": 19,
+    "initiative": 2,
+    "save.STR": 5,
+    "save.CON": 4,
+    "save.DEX": 2,
+    "skill.athletics": 5,
+    "passivePerception": 13,
+    "attack.melee": 5,
+    "spellDc": 0
+  }
+}

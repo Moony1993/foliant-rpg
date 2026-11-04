@@ -1,0 +1,16 @@
+{
+  "format": "foliant-rules",
+  "apiVersion": 1,
+  "type": "system",
+  "id": "srd.5e-2014-en",
+  "name": "5e SRD 5.1 (English)",
+  "version": "0.9.0",
+  "license": "CC-BY-4.0",
+  "attribution": "This work includes material taken from the System Reference Document 5.1 (\"SRD 5.1\") by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+  "authors": [
+    "Foliant"
+  ],
+  "languages": [
+    "en"
+  ]
+}

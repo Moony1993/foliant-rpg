@@ -1,0 +1,279 @@
+{
+  "abilities": [
+    {
+      "key": "STR",
+      "label": "STR",
+      "name": "Strength"
+    },
+    {
+      "key": "DEX",
+      "label": "DEX",
+      "name": "Dexterity"
+    },
+    {
+      "key": "CON",
+      "label": "CON",
+      "name": "Constitution"
+    },
+    {
+      "key": "INT",
+      "label": "INT",
+      "name": "Intelligence"
+    },
+    {
+      "key": "WIS",
+      "label": "WIS",
+      "name": "Wisdom"
+    },
+    {
+      "key": "CHA",
+      "label": "CHA",
+      "name": "Charisma"
+    }
+  ],
+  "saves": [
+    {
+      "key": "save.STR",
+      "label": "Strength",
+      "format": "signed",
+      "short": "STR"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Dexterity",
+      "format": "signed",
+      "short": "DEX"
+    },
+    {
+      "key": "save.CON",
+      "label": "Constitution",
+      "format": "signed",
+      "short": "CON"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligence",
+      "format": "signed",
+      "short": "INT"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Wisdom",
+      "format": "signed",
+      "short": "WIS"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed",
+      "short": "CHA"
+    }
+  ],
+  "sheetStats": [
+    {
+      "key": "maxHp",
+      "label": "Hit points"
+    },
+    {
+      "key": "ac",
+      "label": "Armor Class"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "format": "signed"
+    },
+    {
+      "key": "prof",
+      "label": "Proficiency bonus",
+      "format": "signed"
+    },
+    {
+      "key": "speed",
+      "label": "Speed",
+      "format": "distance"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Perc."
+    },
+    {
+      "key": "attack.melee",
+      "label": "Melee",
+      "format": "signed"
+    },
+    {
+      "key": "attack.ranged",
+      "label": "Ranged",
+      "format": "signed"
+    },
+    {
+      "key": "spellDc",
+      "label": "Spell save DC"
+    },
+    {
+      "key": "spellAttack",
+      "label": "Spell attack",
+      "format": "signed"
+    },
+    {
+      "key": "carryCapacity",
+      "label": "Carrying capacity",
+      "format": "weight"
+    },
+    {
+      "key": "save.STR",
+      "label": "Strength",
+      "format": "signed"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Dexterity",
+      "format": "signed"
+    },
+    {
+      "key": "save.CON",
+      "label": "Constitution",
+      "format": "signed"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligence",
+      "format": "signed"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Wisdom",
+      "format": "signed"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed"
+    }
+  ],
+  "combatStats": [
+    {
+      "key": "prof",
+      "label": "Proficiency bonus",
+      "format": "signed"
+    },
+    {
+      "key": "save.STR",
+      "label": "Strength",
+      "format": "signed"
+    },
+    {
+      "key": "attack.melee",
+      "label": "Melee",
+      "format": "signed"
+    },
+    {
+      "key": "save.DEX",
+      "label": "Dexterity",
+      "format": "signed"
+    },
+    {
+      "key": "attack.ranged",
+      "label": "Ranged",
+      "format": "signed"
+    },
+    {
+      "key": "save.CON",
+      "label": "Constitution",
+      "format": "signed"
+    },
+    {
+      "key": "spellDc",
+      "label": "Spell save DC"
+    },
+    {
+      "key": "save.INT",
+      "label": "Intelligence",
+      "format": "signed"
+    },
+    {
+      "key": "speed",
+      "label": "Movement",
+      "format": "distance"
+    },
+    {
+      "key": "save.WIS",
+      "label": "Wisdom",
+      "format": "signed"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Perception"
+    },
+    {
+      "key": "save.CHA",
+      "label": "Charisma",
+      "format": "signed"
+    }
+  ],
+  "partyStats": [
+    {
+      "key": "ac",
+      "label": "Armor Class",
+      "short": "AC"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "format": "signed",
+      "short": "Init"
+    },
+    {
+      "key": "passivePerception",
+      "label": "Passive Perception",
+      "short": "Perc."
+    },
+    {
+      "key": "save.DEX",
+      "label": "DEX saving throw",
+      "format": "signed",
+      "short": "DEX"
+    },
+    {
+      "key": "save.CON",
+      "label": "CON saving throw",
+      "format": "signed",
+      "short": "CON"
+    },
+    {
+      "key": "save.WIS",
+      "label": "WIS saving throw",
+      "format": "signed",
+      "short": "WIS"
+    },
+    {
+      "key": "spellDc",
+      "label": "Spell save DC",
+      "short": "DC"
+    }
+  ],
+  "armorDetail": "Proficiency bonus +{prof} · spell DC {spellDc}",
+  "quickStats": [
+    {
+      "key": "ac",
+      "label": "Armor Class",
+      "short": "AC",
+      "icon": "shield"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "short": "Init",
+      "format": "signed",
+      "icon": "zap"
+    },
+    {
+      "key": "prof",
+      "label": "Proficiency bonus",
+      "short": "Prof",
+      "format": "signed",
+      "icon": "star"
+    }
+  ]
+}

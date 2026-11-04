@@ -1,0 +1,41 @@
+{
+  "name": "Paladin 6, Mensch, Akolyth, Aura des Schutzes, +1 STÄ/+1 KON",
+  "character": {
+    "level": 6,
+    "classes": [
+      {
+        "classId": "paladin",
+        "level": 6
+      }
+    ],
+    "ancestry": "human",
+    "background": "acolyte",
+    "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 8,
+      "WIS": 10,
+      "CHA": 15
+    },
+    "choices": {
+      "paladin/skills": "athletics,persuasion",
+      "paladin/asi4": "STR1CON1"
+    },
+    "facts": {
+      "armor.type": "heavy",
+      "armor.base": 18
+    }
+  },
+  "expect": {
+    "STR": 17,
+    "CON": 16,
+    "save.STR": 6,
+    "save.WIS": 6,
+    "save.CHA": 9,
+    "save.INT": 2,
+    "skill.insight": 3,
+    "maxHp": 58,
+    "ac": 18
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Kämpferin Stufe 2 mit Schild-Stil und Rüstung",
+  "character": {
+    "level": 2,
+    "classes": [ { "classId": "kaempfer", "level": 2 } ],
+    "abilities": { "STR": 15, "DEX": 12, "CON": 14, "INT": 9, "WIS": 10, "CHA": 8 },
+    "choices": { "kaempfer/stil": "schild" },
+    "facts": { "item.Armor": 2 }
+  },
+  "expect": { "bonus": 1, "maxHp": 18, "ac": 14, "attack": 3, "save.Body": 2, "mod.STR": 2, "carryCapacity": 150 }
+}

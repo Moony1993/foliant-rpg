@@ -1,0 +1,32 @@
+{
+  "name": "Barbar 20, Mensch, Urtümlicher Champion",
+  "character": {
+    "level": 20,
+    "classes": [
+      {
+        "classId": "barbarian",
+        "level": 20
+      }
+    ],
+    "ancestry": "human",
+    "abilities": {
+      "STR": 18,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 8,
+      "WIS": 10,
+      "CHA": 8
+    },
+    "facts": {
+      "armor.type": "none"
+    }
+  },
+  "expect": {
+    "STR": 23,
+    "CON": 21,
+    "ac": 17,
+    "save.STR": 12,
+    "save.CON": 11,
+    "prof": 6
+  }
+}

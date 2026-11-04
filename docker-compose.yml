@@ -1,0 +1,19 @@
+# Self-hosting with SQLite (fine for a few groups). Start: JWT_KEY=$(openssl rand -base64 48) docker compose up -d
+# The first start logs a one-time admin password: docker compose logs foliant | grep "one-time password"
+services:
+  foliant:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      Jwt__Key: ${JWT_KEY:?set JWT_KEY, e.g. JWT_KEY=$(openssl rand -base64 48)}
+      # Optional: fixed start password instead of a generated one.
+      # Seed__AdminPassword: ...
+    volumes:
+      - data:/data
+      - uploads:/app/wwwroot/uploads
+    restart: unless-stopped
+
+volumes:
+  data:
+  uploads:

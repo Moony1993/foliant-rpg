@@ -1,0 +1,52 @@
+# .NET
+bin/
+obj/
+publish/
+*.db
+*.db-shm
+*.db-wal
+*.db.bak*
+
+# Node / frontend
+node_modules/
+dist/
+.env.local
+.env.production
+
+# Locally uploaded media (keep the folder, ignore contents)
+backend/wwwroot/uploads/*
+!backend/wwwroot/uploads/.gitkeep
+
+# IDE / OS
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# AI tooling (local only)
+.claude/
+.claude-flow/
+**/.claude-flow/
+
+# Azure / secrets
+backend/vapid-keys.json
+*.pfx
+*.p12
+*.key
+appsettings.Production.json
+
+# spell crawler artifacts
+scripts/.spellcache/
+scripts/compendium-import.json
+scripts/.featcache/
+scripts/feats-import.json
+
+# Vite dependency cache
+.vite/
+
+# Docker Compose secrets (JWT_KEY)
+/.env
+
+# Built rule packages and campaign exports
+*.foliant-rules
+*.foliant

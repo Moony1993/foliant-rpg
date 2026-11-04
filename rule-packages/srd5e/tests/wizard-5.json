@@ -1,0 +1,40 @@
+{
+  "name": "Magier 5, Hochelf, ohne Rüstung",
+  "character": {
+    "level": 5,
+    "classes": [
+      {
+        "classId": "wizard",
+        "level": 5
+      }
+    ],
+    "abilities": {
+      "STR": 8,
+      "DEX": 14,
+      "CON": 13,
+      "INT": 15,
+      "WIS": 12,
+      "CHA": 10
+    },
+    "choices": {
+      "wizard/skills": "arcana,history"
+    },
+    "facts": {
+      "armor.type": "none"
+    },
+    "ancestry": "high_elf"
+  },
+  "expect": {
+    "prof": 3,
+    "INT": 16,
+    "DEX": 16,
+    "maxHp": 27,
+    "ac": 13,
+    "spellDc": 14,
+    "spellAttack": 6,
+    "save.INT": 6,
+    "skill.arcana": 6,
+    "passivePerception": 14,
+    "speed": 30
+  }
+}

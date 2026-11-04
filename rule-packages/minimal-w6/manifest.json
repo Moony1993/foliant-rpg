@@ -1,0 +1,12 @@
+{
+  "format": "foliant-rules",
+  "apiVersion": 1,
+  "type": "system",
+  "id": "example.minimal-w6",
+  "name": "Minimal-W6 (Beispiel)",
+  "version": "1.1.0",
+  "license": "CC0-1.0",
+  "attribution": "Beispielsystem aus dem Foliant-Repository, frei verwendbar.",
+  "authors": ["Foliant"],
+  "languages": ["de"]
+}
